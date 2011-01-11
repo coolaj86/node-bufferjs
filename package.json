@@ -1,0 +1,12 @@
+{
+  "name"          : "bufferjs",
+  "description"   : "Pure JavaScript Buffer utils.",
+  "url"           : "http://github.com/coolaj86/node-bufferjs/",
+  "keywords"      : ["util", "buffer", "concat", "chunk"],
+  "author"        : "AJ ONeal <coolaj86@gmail.com>",
+  "contributors"  : [],
+  "dependencies"  : [],
+  "lib"           : "lib",
+  "main"          : "./lib/index",
+  "version"       : "0.2.0"
+}
