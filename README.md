@@ -3,17 +3,19 @@ node-bufferjs
 
 Pure JavaScript utils which extend the global `Buffer` object in Node.JS.
 
-    npm install buffer
+    npm install bufferjs
 
 API
 ====
+
+    require('bufferjs');
 
 Buffer.concat(b1, b2, ...)
 ----
 
 Returns a new `Buffer` with the contents of b1, b2, ....
 
-    require('buffer/concat');
+    require('bufferjs/concat');
 
     var b1 = new Buffer("abc"),
       b2 = new Buffer("def"),
@@ -29,7 +31,7 @@ Buffer.concat([b1, b2, ...])
 
 Returns a new `Buffer` with the contents of all buffers in the `Array`.
 
-    require('buffer/concat');
+    require('bufferjs/concat');
 
     var buffers = [
         new Buffer("abc"),
@@ -52,7 +54,7 @@ Returns `true` when full
 
 Returns `new Buffer` if buffer overflows
 
-    require('buffer/add-chunk');
+    require('bufferjs/add-chunk');
 
     var buffer = new Buffer(9),
       overflow;
