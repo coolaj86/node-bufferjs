@@ -4,7 +4,7 @@
   "url"           : "http://github.com/coolaj86/node-bufferjs/",
   "keywords"      : ["util", "buffer", "concat", "chunk"],
   "author"        : "AJ ONeal <coolaj86@gmail.com>",
-  "contributors"  : [],
+  "contributors"  : ["Nathan Rajlich <nathan@tootallnate.net>"],
   "dependencies"  : [],
   "version"       : "0.2.2",
   "main"          : "./index",
