@@ -4,6 +4,7 @@ var provide = provide || function () {};
 
   require('./concat');
   require('./add-chunk');
+  require('./indexOf');
 
   provide('buffer');
 }());

@@ -73,3 +73,37 @@ Returns `new Buffer` if buffer overflows
     overflow = buffer.addChunk(new Buffer("jkl"));
     buffer.toString(); // abcdefghi
     overflow.toString(); // jkl
+
+
+Buffer.indexOf(haystack, needle)
+----
+
+Searches the given _haystack_ Buffer for the given _needle_ Buffer. Returns the index
+of the first occurence of `needle`, or -1 if the pattern was not found. `needle` may also
+be a regular String, for convenience.
+
+    require('bufferjs/indexOf');
+
+    var haystack = new Buffer(10);
+    var needle = '\r\n';
+    haystack.write(needle, 5);
+    
+    Buffer.indexOf(haystack, needle); // 5
+    Buffer.indexOf(haystack, 'NOT_IN_HAYSTACK'); // -1
+
+
+buffer.indexOf(needle)
+----
+
+OO-style variant of `Buffer.indexOf`. `this` is the _haystack_, and only _needle_ needs
+to be supplied when called.
+
+    require('bufferjs/indexOf');
+  
+    var haystack = new Buffer(10);
+    var needle = '\r\n';
+    haystack.write(needle, 5);
+
+    haystack.indexOf(needle); // 5
+    haystack.indexOf('NOT_IN_HAYSTACK'); // -1
+
