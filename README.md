@@ -107,3 +107,8 @@ to be supplied when called.
     haystack.indexOf(needle); // 5
     haystack.indexOf('NOT_IN_HAYSTACK'); // -1
 
+
+TODO
+---
+
+use `assert` in all tests
