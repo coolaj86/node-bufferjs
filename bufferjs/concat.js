@@ -7,10 +7,13 @@
     if (!Array.isArray(bufs)) {
       bufs = Array.prototype.slice.call(arguments);
     }
-
-    bufs.forEach(function (buf) {
-      length += buf.length;
-    });
+    for (var i=0, l=bufs.length; i<l; i++) {
+      buffer = bufs[i];
+      if (!Buffer.isBuffer(buffer)) {
+        buffer = bufs[i] = new Buffer(buffer);
+      }
+      length += buffer.length;
+    }
     buffer = new Buffer(length);
 
     bufs.forEach(function (buf, i) {
