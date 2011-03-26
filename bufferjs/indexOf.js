@@ -5,9 +5,11 @@
    * A naiive 'Buffer.indexOf' function. Requires both the
    * needle and haystack to be Buffer instances.
    */
-  function indexOf(haystack, needle) {
+  function indexOf(haystack, needle, i) {
     if (!Buffer.isBuffer(needle)) needle = new Buffer(needle);
-    for (var i=0, l=haystack.length-needle.length+1; i<l; i++) {
+    if (typeof i === 'undefined') i = 0;
+    var l = haystack.length - needle.length + 1;
+    while (i<l) {
       var good = true;
       for (var j=0, n=needle.length; j<n; j++) {
         if (haystack[i+j] !== needle[j]) {
@@ -16,12 +18,13 @@
         }
       }
       if (good) return i;
+      i++;
     }
     return -1;
   }
   Buffer.indexOf = indexOf;
-  Buffer.prototype.indexOf = function(needle) {
-    return Buffer.indexOf(this, needle);
+  Buffer.prototype.indexOf = function(needle, i) {
+    return Buffer.indexOf(this, needle, i);
   }
 
 })();

@@ -26,8 +26,21 @@
     assert.equal(haystack.indexOf('should not be found'), -1);
   }
 
+  // Test starting from a specified index
+  function testFromSpecifiedIndex() {
+    var haystack = new Buffer('abracadabra')
+      , needle = new Buffer('a');
+
+    assert.equal(haystack.indexOf(needle), 0);
+    assert.equal(Buffer.indexOf(haystack, needle, 1), 3);
+    assert.equal(haystack.indexOf(needle, 4), 5);
+    assert.equal(Buffer.indexOf(haystack, needle, 6), 7);
+    assert.equal(haystack.indexOf(needle, 8), 10);
+  }
+
   test1();
   test2();
+  testFromSpecifiedIndex();
 
   console.log("Done. `indexOf` tests passed!");
 }());
