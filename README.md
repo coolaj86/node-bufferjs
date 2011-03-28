@@ -75,12 +75,12 @@ Returns `new Buffer` if buffer overflows
     overflow.toString(); // jkl
 
 
-Buffer.indexOf(haystack, needle)
+Buffer.indexOf(haystack, needle, startIndex)
 ----
 
 Searches the given _haystack_ Buffer for the given _needle_ Buffer. Returns the index
-of the first occurence of `needle`, or -1 if the pattern was not found. `needle` may also
-be a regular String, for convenience.
+of the first occurence of `needle`, or `-1` if the pattern was not found. `needle` may also
+be a regular String, for convenience. `startIndex` tells at which index to begin the search.
 
     require('bufferjs/indexOf');
 
@@ -92,7 +92,7 @@ be a regular String, for convenience.
     Buffer.indexOf(haystack, 'NOT_IN_HAYSTACK'); // -1
 
 
-buffer.indexOf(needle)
+buffer.indexOf(needle, startIndex)
 ----
 
 OO-style variant of `Buffer.indexOf`. `this` is the _haystack_, and only _needle_ needs
