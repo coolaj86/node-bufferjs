@@ -2,11 +2,11 @@
   "name"          : "bufferjs",
   "description"   : "Pure JavaScript Buffer utils.",
   "url"           : "http://github.com/coolaj86/node-bufferjs/",
-  "keywords"      : ["util", "buffer", "concat", "chunk"],
+  "keywords"      : ["util", "buffer", "concat", "chunk", "indexOf"],
   "author"        : "AJ ONeal <coolaj86@gmail.com>",
   "contributors"  : ["Nathan Rajlich <nathan@tootallnate.net>"],
   "dependencies"  : [],
-  "version"       : "0.2.3",
+  "version"       : "1.0.0",
   "main"          : "./index",
   "engines"       : {
                       "node" : ">=0.2.0 <0.5.0"
