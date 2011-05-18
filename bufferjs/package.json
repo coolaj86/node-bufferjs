@@ -6,9 +6,9 @@
   "author"        : "AJ ONeal <coolaj86@gmail.com>",
   "contributors"  : ["Nathan Rajlich <nathan@tootallnate.net>"],
   "dependencies"  : [],
-  "version"       : "1.0.0",
+  "version"       : "1.0.1",
   "main"          : "./index",
   "engines"       : {
-                      "node" : ">=0.2.0 <0.5.0"
+                      "node" : ">=0.2.0"
                     }
 }
