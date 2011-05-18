@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  require('bufferjs/indexOf');
+  require('../bufferjs/indexOf');
 
   var assert = require('assert');
 

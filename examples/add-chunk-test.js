@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  require('../lib/add-chunk');
+  require('../bufferjs/add-chunk');
 
   var buffer, remnant, result;
 
