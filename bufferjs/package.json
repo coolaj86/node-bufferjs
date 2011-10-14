@@ -6,7 +6,7 @@
   "author"        : "AJ ONeal <coolaj86@gmail.com>",
   "contributors"  : ["Nathan Rajlich <nathan@tootallnate.net>"],
   "dependencies"  : [],
-  "version"       : "1.0.1",
+  "version"       : "1.0.2",
   "main"          : "./index",
   "engines"       : {
                       "node" : ">=0.2.0"
