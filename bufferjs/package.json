@@ -5,7 +5,7 @@
   "keywords"      : ["util", "buffer", "concat", "chunk", "indexOf"],
   "author"        : "AJ ONeal <coolaj86@gmail.com>",
   "contributors"  : ["Nathan Rajlich <nathan@tootallnate.net>"],
-  "dependencies"  : [],
+  "dependencies"  : {},
   "version"       : "1.0.2",
   "main"          : "./index",
   "engines"       : {
