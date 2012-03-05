@@ -2,29 +2,30 @@
   "use strict";
 
   function concat(bufs) {
-    var buffer, length = 0, index = 0;
-
     if (!Array.isArray(bufs)) {
       bufs = Array.prototype.slice.call(arguments);
     }
-    for (var i=0, l=bufs.length; i<l; i++) {
-      buffer = bufs[i];
-      if (!Buffer.isBuffer(buffer)) {
-        buffer = bufs[i] = new Buffer(buffer);
-      }
-      length += buffer.length;
-    }
-    buffer = new Buffer(length);
 
-    bufs.forEach(function (buf, i) {
-      buf = bufs[i];
-      buf.copy(buffer, index, 0, buf.length);
-      index += buf.length;
-      delete bufs[i];
+    var bufsToConcat = [], length = 0;
+    bufs.forEach(function (buf) {
+      if (buf) {
+        if (!Buffer.isBuffer(buf)) {
+          buf = new Buffer(buf);
+        }
+        length += buf.length;
+        bufsToConcat.push(buf);
+      }
     });
 
-    return buffer;
+    var concatBuf = new Buffer(length), index = 0;
+    bufsToConcat.forEach(function (buf) {
+      buf.copy(concatBuf, index, 0, buf.length);
+      index += buf.length;
+    });
+
+    return concatBuf;
   }
+  
   Buffer.concat = concat;
 
 }());
