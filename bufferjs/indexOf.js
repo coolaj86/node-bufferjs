@@ -1,3 +1,4 @@
+/*jshint strict:true node:true es5:true onevar:true laxcomma:true laxbreak:true eqeqeq:true immed:true latedef:true*/
 (function () {
   "use strict";
 
@@ -22,9 +23,14 @@
     }
     return -1;
   }
-  Buffer.indexOf = indexOf;
-  Buffer.prototype.indexOf = function(needle, i) {
-    return Buffer.indexOf(this, needle, i);
+
+  if (!Buffer.indexOf) {
+    Buffer.indexOf = indexOf;
+  }
+  if (!Buffer.prototype.indexOf) {
+    Buffer.prototype.indexOf = function(needle, i) {
+      return Buffer.indexOf(this, needle, i);
+    };
   }
 
 })();

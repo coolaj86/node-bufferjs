@@ -10,45 +10,9 @@ API
 
     require('bufferjs');
 
-Buffer.concat(b1, b2, ...)
-----
-
-**DO NOT use this METHOD**: Node.JS 0.8.x has Buffer.concat built-in, with an incompatible syntax
-
-Returns a new `Buffer` with the contents of b1, b2, ....
-
-    require('bufferjs/concat');
-
-    var b1 = new Buffer("abc"),
-      b2 = new Buffer("def"),
-      b3 = new Buffer("ghi"),
-      buffer;
-
-    buffer = Buffer.concat(b1, b2, b3);
-    console.log(buffer.toString());
-    // abcdefghi
-
-Buffer.concat([b1, b2, ...])
-----
-
-**Deprecated**: Node.JS 0.8.x has Buffer.concat built-in (compatible)
-
-
-Returns a new `Buffer` with the contents of all buffers in the `Array`.
-
-    require('bufferjs/concat');
-
-    var buffers = [
-        new Buffer("abc"),
-        new Buffer("def"),
-        new Buffer("ghi")
-      ],
-      buffer;
-
-    buffer = Buffer.concat(buffers);
-    console.log(buffer.toString());
-    // abcdefghi
-
+  * buffer.addChunk(chunk)
+  * Buffer.indexOf(haystack, needle, startIndex)
+  * buffer.indexOf(needle, startIndex)
 
 buffer.addChunk(chunk)
 ----
@@ -112,8 +76,26 @@ to be supplied when called.
     haystack.indexOf(needle); // 5
     haystack.indexOf('NOT_IN_HAYSTACK'); // -1
 
+Buffer.concat(list, [totalLength])
+----
 
-TODO
----
+**Deprecated**: Node.JS 0.8.x has Buffer.concat built-in (compatible).
+See http://nodejs.org/api/buffer.html#buffer_class_method_buffer_concat_list_totallength
 
-use `assert` in all tests
+**WARNING**: The built-in concat will be used when available
+
+Returns a new `Buffer` with the contents of all buffers in the `Array`.
+
+    require('bufferjs/concat');
+
+    var buffers = [
+            new Buffer("abc")
+          , new Buffer("def")
+          , new Buffer("ghi")
+        ]
+      , buffer
+      ;
+
+    buffer = Buffer.concat(buffers);
+    console.log(buffer.toString('utf8'));
+    // abcdefghi
