@@ -13,7 +13,7 @@ API
 Buffer.concat(b1, b2, ...)
 ----
 
-** DO NOT use this METHOD**: Node.JS 0.8.x has Buffer.concat built-in, with an incompatible syntax
+**DO NOT use this METHOD**: Node.JS 0.8.x has Buffer.concat built-in, with an incompatible syntax
 
 Returns a new `Buffer` with the contents of b1, b2, ....
 
