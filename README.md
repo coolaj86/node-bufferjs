@@ -82,7 +82,7 @@ Buffer.concat(list, [totalLength])
 **Deprecated**: Node.JS 0.8.x has Buffer.concat built-in (compatible).
 See http://nodejs.org/api/buffer.html#buffer_class_method_buffer_concat_list_totallength
 
-**WARNING**: The built-in concat will be used when available
+**WARNING**: v1.2.1 uses NON-NATIVE concat. v2.0.0 uses NATIVE concat ONLY.
 
 Returns a new `Buffer` with the contents of all buffers in the `Array`.
 
