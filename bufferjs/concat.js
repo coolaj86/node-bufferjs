@@ -32,9 +32,9 @@
     return concatBuf;
   }
   
-  if (!Buffer.concat) {
-    Buffer.concat = concat;
-  } else {
-    console.warn('Native Buffer.concat found, NOT USING bufferjs/concat');
+  Buffer.concat = concat;
+  if (Buffer.concat) {
+    console.warn('Native Buffer.concat found. Deprecation messages are on. Please fix your app and upgrade to bufferjs 2.0');
+    console.warn('see http://nodejs.org/api/buffer.html#buffer_class_method_buffer_concat_list_totallength');
   }
 }());
