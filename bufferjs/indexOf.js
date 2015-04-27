@@ -13,7 +13,7 @@
     while (i<l) {
       var good = true;
       for (var j=0, n=needle.length; j<n; j++) {
-        if (haystack.get(i+j) !== needle.get(j)) {
+        if (haystack[i+j] !== needle[j]) {
           good = false;
           break;
         }
