@@ -4,6 +4,7 @@
   "url"           : "http://github.com/coolaj86/node-bufferjs/",
   "keywords"      : ["util", "buffer", "chunk", "indexOf"],
   "author"        : "AJ ONeal <coolaj86@gmail.com>",
+  "license"       : "MIT",
   "contributors"  : [
                       "Nathan Rajlich <nathan@tootallnate.net>",
                       "Justin Freitag @justinfreitag"
